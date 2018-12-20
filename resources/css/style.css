@@ -112,7 +112,7 @@ font-weight: bold;
   display: flex;
   flex-direction: column;
   padding-top: 32px;
-  border: 0.5px solid lightgrey;
+  border-left: 0.5px solid lightgrey;
 }
 
 .banner-second-right h3 {
