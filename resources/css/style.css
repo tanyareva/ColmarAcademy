@@ -37,6 +37,32 @@ body {
   margin-right: 16px;
 }
 
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+  .menu {
+    width: 100%;
+  }
+  .mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+
+  .mobile {
+    display: none;
+  }
+}
+
 /* first */
 
 .container-first {
@@ -60,9 +86,10 @@ body {
 }
 
 .banner-text h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   padding-right: 24px;
+  line-height: 1.4;
 }
 
 .banner-text h3 {
@@ -71,13 +98,39 @@ font-weight: bold;
 }
 
 .button {
-  width: 250px;
   color: white;
   background: #555;
   text-align: center;
   padding: 8px 0;
 }
 
+@media only screen and (max-width: 600px) {
+  .container-first {
+    display: block;
+  }
+
+  .banner-first {
+    padding: 0;
+  }
+
+  .banner-text h1 {
+    padding: 32px 0 32px 16px;
+  }
+
+  .banner-text h3 {
+  padding: 0 0 0 16px;
+  }
+  .button {
+    margin: 24px 16px 32px 16px;
+  }
+
+}
+
+@media only screen and (min-width: 601px) {
+  .button {
+    width: 250px;
+  }
+}
 /* second */
 
 .container-second {
@@ -107,12 +160,10 @@ font-weight: bold;
 }
 
 .banner-second-right {
-  flex-basis: 40%;
   justify-content: flex-start;
   display: flex;
   flex-direction: column;
   padding-top: 32px;
-  border-left: 0.5px solid lightgrey;
 }
 
 .banner-second-right h3 {
@@ -127,12 +178,10 @@ font-weight: bold;
 .banner-second-right p {
   font-size: 14px;
   color: DodgerBlue;
-
 }
 
 .main-first {
   display: flex;
-  border-bottom: 4px solid lightgrey;
 }
 
 .main-first .image {
@@ -176,7 +225,6 @@ font-weight: bold;
 
 .main-third {
   display: flex;
-  background: lightgray;
 }
 
 .main-third .image {
@@ -195,6 +243,39 @@ font-weight: bold;
 
 .main-third .image  img{
   max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-second {
+    display: none;
+  }
+  .main-first {
+    display: block;
+  }
+
+  .main-second {
+    display: block;
+  }
+
+  .main-third {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .banner-second-right {
+    flex-basis: 40%;
+    border-left: 0.5px solid lightgrey;
+  }
+
+  .main-first {
+    border-bottom: 4px solid lightgrey;
+  }
+
+  .main-third {
+    background: lightgray;
+  }
+
 }
 
 /* third */
@@ -353,6 +434,8 @@ font-weight: bold;
   justify-content: center;
   flex-direction: column;
 }
+
+/* footer */
 
 .footer {
   display: flex;
